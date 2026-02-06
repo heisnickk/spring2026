@@ -1,51 +1,35 @@
-fn is_even(n: i32) -> bool {
-    n % 2 == 0
+const FREEZING_POINT: f64 = 32.0;
+
+
+fn farenheit_to_celsius(f: f64) -> f64 {
+    (f - FREEZING_POINT) * 5.0 / 9.0
 }
+
+/*
+fn celsius_to_farenheit(c: f64) -> f64 {
+    c * 9.0 / 5.0 + FREEZING_POINT
+}
+    */
+
+//Commented the celsius to farenheit function since it wasnt being used.
 
 fn main() {
-    let numbers: [i32; 10] = [ 2, 20, 14, 7, 9, 11, 15, 5, 8, 4];
+    
+    let mut temp_f: f64 =32.0;
 
-    for num in numbers {
-        if num % 3 == 0 && num % 5 == 0 {
-            println!("{}: FizzBuzz", num);
-     } else if num % 3 == 0 {
-            println!("{}: Fizz", num);
-     } else if num % 5 == 0 {
-            println!("{}: Buzz", num);
-     } else if is_even(num) {
-            println!("{}: Even", num);
-     } else {
-            println!("{}: Odd", num);
-     } 
-}
+    let temp_c = farenheit_to_celsius(temp_f);
+    println!("{}°F is {:.2}°C", temp_f, temp_c);
+/*
+    let back_to_f = celsius_to_farenheit(temp_c);
+    println!("{:.2}°C is {:.2}°F", temp_c, back_to_f);
+*/
 
-let mut index = 0;
-let mut sum = 0;
-
-while index < numbers.len(){
-    sum += numbers[index];
-    index += 1;
-}
-
-
-println!("Sum of numbers: {}", sum); 
-
-let mut i = 0;
-let mut largest = numbers[0];
-
-loop {
-    if numbers [i] > largest {
-        largest = numbers[i];
+    for _ in 0..5 {
+        temp_f += 1.0;
+        let converted = farenheit_to_celsius(temp_f);
+        println!("{}°F is {:.2}°C", temp_f, converted);
     }
-    i += 1;
 
-    if i >= numbers.len() {
-        break;
-    }
-}
-println!("Largest number: {}", largest);
+
 
 }
-
-
-
