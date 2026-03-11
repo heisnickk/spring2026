@@ -3,9 +3,21 @@
 version = 4
 
 [[package]]
+name = "assigment2"
+version = "0.1.0"
+
+[[package]]
+name = "book_catalog"
+version = "0.1.0"
+
+[[package]]
 name = "homework1"
 version = "0.1.0"
 
 [[package]]
 name = "in_class"
+version = "0.1.0"
+
+[[package]]
+name = "new_andEnum"
 version = "0.1.0"
