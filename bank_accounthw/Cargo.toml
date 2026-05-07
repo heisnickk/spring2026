@@ -1,6 +1,0 @@
-[package]
-name = "bank_accounthw"
-version.workspace = true
-edition.workspace = true
-
-[dependencies]
