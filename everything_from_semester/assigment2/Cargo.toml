@@ -1,0 +1,6 @@
+[package]
+name = "assigment2"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]

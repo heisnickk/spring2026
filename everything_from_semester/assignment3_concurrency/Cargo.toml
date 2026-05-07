@@ -1,0 +1,6 @@
+[package]
+name = "assignment3_concurrency"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
