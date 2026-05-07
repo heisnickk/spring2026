@@ -72,7 +72,7 @@ Both versions track the same stuff at the end:
 | Max wait time | The worst wait any single task had |
 | CPU / IO count | How many of each type finished |
 
----
+------
 
 ## 6. Experiment Results
 
